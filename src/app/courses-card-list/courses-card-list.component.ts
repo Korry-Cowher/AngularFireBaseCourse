@@ -1,10 +1,10 @@
-import {Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation} from '@angular/core';
-import {Course} from "../model/course";
+import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
+import { Course } from "../model/course";
 import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
-import {EditCourseDialogComponent} from "../edit-course-dialog/edit-course-dialog.component";
-import {catchError, tap} from 'rxjs/operators';
-import {throwError} from 'rxjs';
-import {Router} from '@angular/router';
+import { EditCourseDialogComponent } from "../edit-course-dialog/edit-course-dialog.component";
+import { catchError, tap } from 'rxjs/operators';
+import { throwError } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'courses-card-list',
@@ -23,15 +23,15 @@ export class CoursesCardListComponent implements OnInit {
     courseDeleted = new EventEmitter<Course>();
 
     constructor(
-      private dialog: MatDialog,
-      private router: Router) {
+        private dialog: MatDialog,
+        private router: Router) {
     }
 
     ngOnInit() {
 
     }
 
-    editCourse(course:Course) {
+    editCourse(course: Course) {
 
         const dialogConfig = new MatDialogConfig();
 
